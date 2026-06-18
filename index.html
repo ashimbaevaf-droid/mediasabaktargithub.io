@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Медиа Сабак — Санарип жарнама жана медиа билим</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800;900&family=Unbounded:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#050816; --bg2:#0b1024; --ink:#ffffff; --muted:#bfcae3; --line:rgba(255,255,255,.16);
+      --violet:#7c3aed; --blue:#2563eb; --cyan:#06b6d4; --pink:#ec4899; --orange:#fb923c; --green:#22c55e; --yellow:#facc15;
+      --glass:rgba(255,255,255,.09); --glass2:rgba(255,255,255,.14); --dark:#070b18;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Manrope,Arial,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+    a{text-decoration:none;color:inherit} img,video,iframe{max-width:100%;display:block} button{font-family:inherit}
+    .font-display{font-family:Unbounded,Manrope,sans-serif;letter-spacing:-.045em}.container{width:min(1220px,92%);margin:auto}.grid{display:grid}.two{grid-template-columns:1fr 1fr}.three{grid-template-columns:repeat(3,1fr)}.four{grid-template-columns:repeat(4,1fr)}.gap{gap:24px}.section{padding:92px 0;position:relative}.small{display:inline-flex;gap:8px;align-items:center;color:#d8b4fe;font-size:13px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.small:before{content:"";width:28px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--pink));border-radius:2px}.title{font-family:Unbounded,Manrope,sans-serif;font-size:clamp(34px,5.7vw,76px);line-height:.94;margin:12px 0 18px}.lead{font-size:18px;line-height:1.75;color:#dbeafe;max-width:820px}.muted{color:var(--muted);line-height:1.75}.glass{background:linear-gradient(135deg,rgba(255,255,255,.13),rgba(255,255,255,.055));border:1px solid var(--line);box-shadow:0 24px 70px rgba(0,0,0,.28);backdrop-filter:blur(18px)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;border-radius:18px;border:1px solid rgba(255,255,255,.20);font-weight:900;cursor:pointer;transition:.25s;box-shadow:0 18px 40px rgba(0,0,0,.20)}.btn:hover{transform:translateY(-4px);box-shadow:0 22px 60px rgba(0,0,0,.34)}.btn-primary{background:linear-gradient(135deg,var(--violet),var(--cyan));color:white}.btn-pink{background:linear-gradient(135deg,var(--pink),var(--orange));color:white}.btn-white{background:white;color:#0b1024}.btn-soft{background:rgba(255,255,255,.08);color:white}.pill{display:inline-flex;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.12);font-size:12px;font-weight:900;margin:0 7px 8px 0;color:#e0f2fe}.chip{display:inline-flex;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.15);font-size:13px;font-weight:900;color:#e0e7ff}
+    body:before{content:"";position:fixed;inset:0;z-index:-4;background:radial-gradient(circle at 15% 8%,rgba(124,58,237,.55),transparent 32%),radial-gradient(circle at 85% 12%,rgba(6,182,212,.33),transparent 34%),radial-gradient(circle at 55% 78%,rgba(236,72,153,.24),transparent 30%),linear-gradient(145deg,#050816,#071023 55%,#120720)}
+    body:after{content:"";position:fixed;inset:0;z-index:-3;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(to bottom,black,transparent 88%)}.blob{position:absolute;border-radius:50%;filter:blur(24px);opacity:.65;z-index:-1}.b1{width:260px;height:260px;background:var(--violet);top:40px;left:-110px}.b2{width:230px;height:230px;background:var(--cyan);right:-90px;bottom:80px}.b3{width:180px;height:180px;background:var(--pink);right:12%;top:10%}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(5,8,22,.74);backdrop-filter:blur(22px);border-bottom:1px solid var(--line)}.nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}.logo{display:flex;align-items:center;gap:12px;font-weight:900}.logo-photo{width:54px;height:54px;border-radius:18px;overflow:hidden;border:2px solid rgba(255,255,255,.30);box-shadow:0 18px 44px rgba(124,58,237,.34);background:#111827}.logo-photo img{width:100%;height:100%;object-fit:cover}.nav-links{display:flex;align-items:center;gap:18px}.nav-links a{font-size:14px;font-weight:900;color:#e2e8f0}.nav-links a:hover{color:#fff}.logo small{font-weight:700;color:#94a3b8}
+    .hero{min-height:calc(100vh - 78px);padding:78px 0 70px;overflow:hidden}.hero h1{font-size:clamp(48px,8vw,104px);line-height:.86;margin:24px 0;background:linear-gradient(90deg,#fff,#c4b5fd,#67e8f9,#fbcfe8,#fff);background-size:220%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 8s linear infinite}.hero-visual{position:relative}.hero-main{border-radius:36px;overflow:hidden;min-height:580px;position:relative}.hero-main img{width:100%;height:580px;object-fit:cover;filter:saturate(1.15) contrast(1.05)}.hero-main:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(5,8,22,.92),transparent 52%)}.hero-float{position:absolute;z-index:2;border-radius:26px;padding:18px}.hero-float.one{left:-28px;bottom:95px;max-width:240px}.hero-float.two{right:-26px;top:76px;max-width:245px}.hero-stats{position:absolute;left:24px;right:24px;bottom:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;z-index:2}.hero-stat{border-radius:22px;padding:16px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18)}.hero-stat b{font-family:Unbounded;font-size:28px}.ticker{overflow:hidden;border-block:1px solid var(--line);background:rgba(255,255,255,.06)}.ticker-track{display:flex;white-space:nowrap;animation:marquee 32s linear infinite}.ticker span{padding:18px 36px;font-family:Unbounded;font-weight:900;color:#e9d5ff}.ticker span:nth-child(even){color:#67e8f9}
+    .topic-card{position:relative;padding:28px;border-radius:30px;min-height:360px;overflow:hidden;transition:.32s}.topic-card:hover{transform:translateY(-8px)}.topic-card:before{content:attr(data-num);position:absolute;right:-8px;top:0;font-family:Unbounded;font-size:92px;font-weight:900;color:rgba(255,255,255,.055)}.topic-card h3{font-family:Unbounded;margin:16px 0 12px;font-size:24px}.topic-icon{width:62px;height:62px;border-radius:22px;display:grid;place-items:center;font-size:28px;background:linear-gradient(135deg,var(--violet),var(--cyan));box-shadow:0 18px 40px rgba(6,182,212,.20)}.topic-card ul{margin:14px 0 0;padding-left:19px;color:#dbeafe;line-height:1.8}.topic-actions{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap}.deep{border-radius:36px;padding:34px}.deep h3{font-family:Unbounded;font-size:32px;margin:0 0 14px}.timeline{position:relative;padding-left:24px}.timeline:before{content:"";position:absolute;left:7px;top:8px;bottom:10px;width:2px;background:linear-gradient(var(--cyan),var(--pink))}.timeline div{position:relative;margin-bottom:20px}.timeline div:before{content:"";position:absolute;left:-23px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 6px rgba(6,182,212,.13)}.use-card{border-radius:28px;padding:24px}.use-card b{font-family:Unbounded;font-size:20px}.first-topic{border-radius:38px;overflow:hidden}.first-media{position:relative;min-height:460px}.first-media img{width:100%;height:100%;min-height:460px;object-fit:cover}.first-media:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(5,8,22,.90),transparent)}.first-content{padding:34px}.video-card{border-radius:30px;overflow:hidden}.video-card video{width:100%;height:270px;object-fit:cover;background:#000}.video-body{padding:22px}.video-body h3{font-family:Unbounded;margin:0 0 8px}.pdf-card{padding:24px;border-radius:28px;min-height:245px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.pdf-card:before{content:"PDF";position:absolute;right:-12px;top:12px;font-family:Unbounded;font-size:72px;font-weight:900;color:rgba(255,255,255,.06)}.pdf-card h3{font-family:Unbounded;margin:0 0 10px;font-size:22px}.gallery{columns:4 220px;column-gap:18px}.gallery figure{break-inside:avoid;margin:0 0 18px;border-radius:26px;overflow:hidden;position:relative}.gallery img{width:100%;transition:.45s}.gallery figure:hover img{transform:scale(1.08)}.gallery figcaption{position:absolute;left:12px;right:12px;bottom:12px;padding:10px 12px;border-radius:16px;background:rgba(7,17,31,.76);backdrop-filter:blur(12px);font-size:13px;font-weight:900}.program-row{display:grid;grid-template-columns:72px 1fr auto;gap:18px;align-items:center;margin-bottom:14px;padding:18px;border-radius:24px}.program-num{width:54px;height:54px;border-radius:18px;background:linear-gradient(135deg,var(--pink),var(--orange));display:grid;place-items:center;font-family:Unbounded;font-weight:900}.program-row h3{margin:0 0 6px;font-size:18px}.wow-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.wow-box{border-radius:28px;padding:26px}.wow-box b{font-family:Unbounded;font-size:42px;color:#67e8f9}.modal{position:fixed;inset:0;display:none;place-items:center;background:rgba(0,0,0,.78);z-index:100;padding:22px}.modal.open{display:grid}.modal-box{width:min(1080px,96vw);height:min(88vh,780px);background:#0b1020;border-radius:28px;overflow:hidden;border:1px solid rgba(255,255,255,.22);display:flex;flex-direction:column}.modal-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:15px 18px;border-bottom:1px solid var(--line)}.modal iframe{flex:1;width:100%;border:0;background:white}.modal-scroll{overflow:auto;padding:24px}.close{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.18);color:white;border-radius:14px;padding:10px 14px;font-weight:900;cursor:pointer}.footer{padding:70px 0 28px;background:rgba(0,0,0,.34);border-top:1px solid var(--line)}.reveal{opacity:0;transform:translateY(28px);transition:.72s}.reveal.show{opacity:1;transform:none}@keyframes shine{to{background-position:220%}}@keyframes marquee{to{transform:translateX(-50%)}}
+    @media(max-width:980px){.two,.three,.four,.wow-strip{grid-template-columns:1fr}.nav-links{display:none}.hero-main,.hero-main img{min-height:430px;height:430px}.hero-float{display:none}.hero-stats{grid-template-columns:1fr}.program-row{grid-template-columns:54px 1fr}.program-row .btn{grid-column:1 / -1}.section{padding:68px 0}.gallery{columns:2 160px}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo">
+        <div class="logo-photo"><img src="logo.png" alt="Медиа Сабак логотиби"></div>
+        <div><div class="font-display">Медиа Сабак</div><small>Интернет реклама · Мобилография · Практика</small></div>
+      </a>
+      <div class="nav-links">
+        <a href="#topics">Багыттар</a><a href="#first">Биринчи тема</a><a href="#videos">Видеолор</a><a href="#pdf">PDF</a><a href="#gallery">Сүрөттөр</a><a href="#contact">Байланыш</a>
+      </div>
+      <a class="btn btn-primary" href="#topics">Сабакты баштоо</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="blob b1"></div><div class="blob b2"></div>
+      <div class="container grid two gap" style="align-items:center">
+        <div class="reveal">
+          <span class="small">Кыргыз тилиндеги санарип платформа</span>
+          <h1>Интернет реклама сабагын заманбап форматта үйрөнүү</h1>
+          <p class="lead">Бул сайт интернет реклама, мобилография, маркетинг, медиа этика жана практикалык иштер боюнча толук маалымат берген окуу платформасы. Ар бир багытта түшүндүрмө, тарыхы, пайдасы, колдонулушу, видео жана PDF материалдар камтылды.</p>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px"><a class="btn btn-primary" href="#first">Биринчи теманы ачуу</a><a class="btn btn-white" href="#videos">Видеону көрүү</a><a class="btn btn-soft" href="#pdf">PDF материалдар</a></div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:26px"><span class="chip">7 негизги багыт</span><span class="chip">Сайт ичинде видео</span><span class="chip">PDF ачылат</span><span class="chip">Практикалык мисалдар</span></div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="hero-main glass"><img src="depositphotos_150876790-stock-photo-opened-laptop-computer-on-workplace.jpg" alt="Санарип окуу"></div>
+          <div class="hero-float one glass"><b>Долбоордун өзгөчөлүгү</b><p class="muted" style="margin:8px 0 0">Билим берүү материалдары, мультимедиалык ресурстар жана практикалык тапшырмалар бир сайттын ичинде ыңгайлуу түрдө көрсөтүлгөн.</p></div>
+          <div class="hero-float two glass"><b>Медиа Сабак</b><p class="muted" style="margin:8px 0 0">билимди кызыктуу, түшүнүктүү жана заманбап форматта үйрөнүү платформасы.</p></div>
+          <div class="hero-stats"><div class="hero-stat"><b>7</b><br><span class="muted">багыт</span></div><div class="hero-stat"><b>3</b><br><span class="muted">видео</span></div><div class="hero-stat"><b>6+</b><br><span class="muted">PDF</span></div></div>
+        </div>
+      </div>
+    </section>
+  
+
+    <section id="topics" class="section">
+      <div class="container">
+        <div class="reveal"><span class="small">Окуу багыттары</span><h2 class="title">Биздеги багыттар</h2><p class="lead">Төмөндөгү багыттар студентке идеядан баштап даяр жарнамага чейин бардык процессти түшүнүүгө жардам берет. Ар бир темада тарыхы, пайдасы, колдонулган жерлери жана практикалык мисалдар берилет.</p></div>
+        <div class="grid three gap" style="margin-top:36px">
+          <article class="topic-card glass reveal" data-num="01"><div class="topic-icon">💡</div><h3>Жарнама идеясы</h3><p class="muted">Жарнама идеясы — товарды же кызматты адамдардын эсинде кала турган образга айландыруу. Идея кардардын көйгөйүн түшүнүүдөн, аудиторияны аныктоодон жана сунуштун өзгөчөлүгүн табуудан башталат.</p><ul><li>Максатты аныктоо</li><li>Аудиториянын каалоосун табуу</li><li>Кыска жана таасирдүү билдирүү түзүү</li></ul><div class="topic-actions"><button class="btn btn-soft" onclick="openTopic('idea')">Кенен маалымат</button></div></article>
+          <article class="topic-card glass reveal" data-num="02"><div class="topic-icon">🎥</div><h3>Мобилография</h3><p class="muted">Мобилография — телефон аркылуу сапаттуу фото жана видео тартуу өнөрү. Бүгүнкү күндө чакан бизнес, блогер, мугалим жана студент үчүн эң керектүү санарип көндүмдөрдүн бири.</p><ul><li>Кадр жана жарык</li><li>Видео монтаж</li><li>Reels, TikTok, Stories</li></ul><div class="topic-actions"><button class="btn btn-soft" onclick="openTopic('mobi')">Кенен маалымат</button></div></article>
+          <article class="topic-card glass reveal" data-num="03"><div class="topic-icon">🧩</div><h3>Контент даярдоо</h3><p class="muted">Контент даярдоо — текст, сүрөт, видео, дизайн жана идеяны бириктирип, аудиторияга пайдалуу материал түзүү. Контент жөн гана кооз пост эмес, ал ишеним жана байланыш жаратат.</p><ul><li>Пост планы</li><li>Сценарий</li><li>Визуалдык стиль</li></ul><div class="topic-actions"><button class="btn btn-soft" onclick="openTopic('content')">Кенен маалымат</button></div></article>
+          <article class="topic-card glass reveal" data-num="04"><div class="topic-icon">🛠</div><h3>Практикалык иш</h3><p class="muted">Практикалык иш студентти теориядан реалдуу тапшырмага алып келет. Мисалы, товар үчүн жарнама тексти, Instagram пост, видео сценарий же контент-план даярдалат.</p><ul><li>Тапшырма</li><li>Натыйжа</li><li>Талдоо</li></ul><div class="topic-actions"><button class="btn btn-soft" onclick="openTopic('practice')">Кенен маалымат</button></div></article>
+          <article class="topic-card glass reveal" data-num="05"><div class="topic-icon">📈</div><h3>Маркетинг</h3><p class="muted">Маркетинг — кардардын муктаждыгын түшүнүп, туура продукт, туура баа, туура канал жана туура байланыш аркылуу сунуш берүү системасы.</p><ul><li>Базарды изилдөө</li><li>Кардар портрети</li><li>Сатуу стратегиясы</li></ul><div class="topic-actions"><button class="btn btn-soft" onclick="openTopic('marketing')">Кенен маалымат</button></div></article>
+          <article class="topic-card glass reveal" data-num="06"><div class="topic-icon">🛡</div><h3>Медиа этика</h3><p class="muted">Медиа этика — маалыматты туура, жоопкерчиликтүү жана адилеттүү таратуу эрежелери. Жарнамада алдамчылыкка, жалган маалыматка жана автордук укукту бузууга жол берилбеши керек.</p><ul><li>Ишенимдүү маалымат</li><li>Автордук укук</li><li>Жоопкерчилик</li></ul><div class="topic-actions"><button class="btn btn-soft" onclick="openTopic('ethics')">Кенен маалымат</button></div></article>
+          <article class="topic-card glass reveal" data-num="07" style="grid-column:1 / -1"><div class="topic-icon">🌐</div><h3>Интернет реклама</h3><p class="muted">Интернет реклама — сайттар, социалдык тармактар, издөө системалары, видеоплатформалар жана мессенджерлер аркылуу аудиторияга жетүү ыкмасы. Ал салттуу жарнамадан айырмаланып, натыйжаны өлчөөгө, аудиторияны так тандоого жана бюджетти көзөмөлдөөгө мүмкүнчүлүк берет.</p><ul><li>Таргет жарнама</li><li>Контексттик жарнама</li><li>Видео жана баннер жарнамалар</li><li>Аналитика жана натыйжа</li></ul><div class="topic-actions"><a class="btn btn-primary" href="#first">Биринчи тема катары окуу</a><button class="btn btn-soft" onclick="openTopic('internet')">Кенен маалымат</button></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="first" class="section" style="background:rgba(255,255,255,.04)">
+      <div class="blob b3"></div>
+      <div class="container">
+        <span class="small">Биринчи тема</span><h2 class="title">Интернет реклама:тарыхы, пайдасы жана колдонулушу</h2>
+        <div class="grid two gap first-topic glass" style="margin-top:34px">
+          <div class="first-media"><img src="rek.jpg" alt="Интернет реклама"></div>
+          <div class="first-content">
+            <h3>Интернет реклама деген эмне?</h3>
+            <p class="muted">Интернет реклама — бул товар, кызмат, билим берүү курсу же бренд тууралуу маалыматты интернет аркылуу адамдарга жеткирүү ыкмасы. Ал сайттарда, социалдык тармактарда, издөө системаларында, видеолордо жана мобилдик тиркемелерде колдонулат. Мисалы, Instagramдагы демөөрчүлүк пост, YouTube алдындагы видео жарнама, Google издөөсүндө чыккан жарнама же сайттагы баннер — баары интернет рекламага кирет.</p>
+            <p class="muted">Бул теманын негизги максаты — студентке жарнама эмнеге керек экенин, кимге багытталарын, кандай форматта берилерин жана анын натыйжасын кантип текшерүүгө болорун үйрөтүү.</p>
+            <div style="margin-top:18px"><span class="pill">Максат</span><span class="pill">Аудитория</span><span class="pill">Канал</span><span class="pill">Контент</span><span class="pill">Аналитика</span></div>
+            <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap"><button class="btn btn-primary" onclick="openPdf('internet.reklama..pdf.pdf')">PDF материалды ачуу</button><a class="btn btn-white" href="#videos">Видео көрсөтүү</a></div>
+          </div>
+        </div>
+
+        <div class="grid two gap" style="margin-top:28px">
+          <div class="deep glass reveal"><h3>Кыскача тарыхы</h3><div class="timeline"><div><b>1990-жылдар</b><p class="muted">Алгачкы веб-сайттар пайда болуп, баннер жарнамалар колдонулган. Интернет реклама жөнөкөй сүрөт жана текст менен башталган.</p></div><div><b>2000-жылдар</b><p class="muted">Издөө системалары күч алып, Google сыяктуу платформалар контексттик жарнаманы өнүктүрдү. Жарнама адамдар издеген сөздөргө жараша көрсөтүлө баштады.</p></div><div><b>2010-жылдар</b><p class="muted">Социалдык тармактар жарнаманы жаңы деңгээлге чыгарды. Facebook, Instagram, YouTube аркылуу аудиторияны жашы, кызыгуусу, жайгашкан жери боюнча тандоо мүмкүн болду.</p></div><div><b>Бүгүнкү күн</b><p class="muted">Жарнама жасалма интеллект, аналитика, кыска видео, мобилография жана автоматташтыруу менен байланышып калды. Азыр реклама тез, так жана өлчөнүүчү болушу керек.</p></div></div></div>
+          <div class="deep glass reveal"><h3>Пайдасы эмнеде?</h3><p class="muted">Интернет реклама бизнеске да, билим берүү уюмдарына да, жеке адистерге да пайдалуу. Ал туура аудиторияга тез жетүүгө, аз бюджет менен баштоого, жарнаманын натыйжасын көрүүгө жана кардар менен түз байланышууга жардам берет.</p><div class="grid two gap" style="margin-top:18px"><div class="use-card glass"><b>Так аудитория</b><p class="muted">Жарнама кимге көрсөтүлөрүн алдын ала тандай аласыз.</p></div><div class="use-card glass"><b>Өлчөнүүчү натыйжа</b><p class="muted">Канча адам көрдү, басты, жазылды — баарын билүүгө болот.</p></div><div class="use-card glass"><b>Тез байланыш</b><p class="muted">Кардар дароо WhatsApp, сайт же форма аркылуу кайрыла алат.</p></div><div class="use-card glass"><b>Ийкемдүү бюджет</b><p class="muted">Кичине сумма менен тест кылып, натыйжага жараша көбөйтүүгө болот.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="small">Кайда колдонулат?</span><h2 class="title">Интернет реклама колдонулган жерлер</h2>
+        <div class="grid four gap" style="margin-top:34px">
+          <div class="use-card glass reveal"><b>Instagram жана TikTok</b><p class="muted">Кыска видео, сторис, Reels, пост жана блогерлер аркылуу товарды таанытуу үчүн.</p></div>
+          <div class="use-card glass reveal"><b>Google издөө</b><p class="muted">Адам керектүү товарды же кызматты издеген учурда жарнама көрсөтүү үчүн.</p></div>
+          <div class="use-card glass reveal"><b>YouTube жана видео</b><p class="muted">Видеого чейин, ортосунда же сунушталган контент аркылуу аудиторияга жетүү үчүн.</p></div>
+          <div class="use-card glass reveal"><b>Сайт жана баннер</b><p class="muted">Компаниянын сайтында акция, курс, кызмат же жаңы продукт жөнүндө маалымат берүү үчүн.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="program" class="section" style="background:rgba(255,255,255,.04)">
+      <div class="container">
+        <span class="small">Сабактын жүрүшү</span><h2 class="title">Темалар жана материалдар</h2><p class="lead">Ар бир тема түшүндүрмө, видео же PDF материал менен бекемделет. Студент теманы окуп, материалды ачып, андан кийин практикалык иш аткарат.</p>
+        <div style="margin-top:34px">
+          <div class="program-row glass reveal"><div class="program-num">1</div><div><h3>Интернет реклама</h3><p class="muted">Түшүнүгү, тарыхы, түрлөрү жана натыйжасын өлчөө.</p></div><button class="btn btn-primary" onclick="openPdf('internet.reklama..pdf.pdf')">PDF көрүү</button></div>
+          <div class="program-row glass reveal"><div class="program-num">2</div><div><h3>Жарнама идеясы</h3><p class="muted">Креативдүү ой жүгүртүү, аудиторияга туура билдирүү түзүү.</p></div><button class="btn btn-soft" onclick="openTopic('idea')">Түшүндүрмө</button></div>
+          <div class="program-row glass reveal"><div class="program-num">3</div><div><h3>Мобилография</h3><p class="muted">Телефон менен сапаттуу визуал жана кыска видео даярдоо.</p></div><button class="btn btn-primary" onclick="openPdf('mob..pdf.pdf')">PDF көрүү</button></div>
+          <div class="program-row glass reveal"><div class="program-num">4</div><div><h3>Контент даярдоо</h3><p class="muted">Пост, текст, сүрөт, видео сценарий жана контент-план.</p></div><button class="btn btn-soft" onclick="openTopic('content')">Түшүндүрмө</button></div>
+          <div class="program-row glass reveal"><div class="program-num">5</div><div><h3>Маркетинг</h3><p class="muted">Кардар, рынок, сунуш, баа жана сатуу каналдары.</p></div><button class="btn btn-primary" onclick="openPdf('marketing..pdf.pdf')">PDF көрүү</button></div>
+          <div class="program-row glass reveal"><div class="program-num">6</div><div><h3>Медиа этика</h3><p class="muted">Чынчыл жарнама, автордук укук, ишенимдүү маалымат.</p></div><button class="btn btn-primary" onclick="openPdf('etika..pdf.pdf')">PDF көрүү</button></div>
+          <div class="program-row glass reveal"><div class="program-num">7</div><div><h3>Практикалык иш</h3><p class="muted">Жарнама постун, видео идеясын жана кампания планын түзүү.</p></div><button class="btn btn-pink" onclick="openTopic('practice')">Практика</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="videos" class="section">
+      <div class="container">
+        <span class="small">Видео материалдар</span><h2 class="title">Видео материалдар</h2><p class="lead"></p>
+        <div class="grid three gap" style="margin-top:36px">
+          <article class="video-card glass reveal"><video controls preload="metadata"><source src="video1.mp4" type="video/mp4">Браузериңиз видеону колдобойт.</video><div class="video-body"><h3>Интернет рекламага киришүү</h3><p class="muted">Биринчи тема боюнча кыска түшүндүрмө: жарнама, аудитория жана максат.</p></div></article>
+          <article class="video-card glass reveal"><video controls preload="metadata"><source src="video2.mp4" type="video/mp4">Браузериңиз видеону колдобойт.</video><div class="video-body"><h3>Контент жана социалдык тармак</h3><p class="muted">Пост, визуал, текст жана аудитория менен байланыш түзүү тууралуу.</p></div></article>
+          <article class="video-card glass reveal"><video controls preload="metadata"><source src="video3.mp4" type="video/mp4">Браузериңиз видеону колдобойт.</video><div class="video-body"><h3>Мобилография негиздери</h3><p class="muted">Телефон менен жарнамага ылайыктуу фото-видео даярдоо.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pdf" class="section" style="background:rgba(255,255,255,.04)">
+      <div class="container">
+        <span class="small">Даяр документтер</span><h2 class="title">PDF материалдар</h2><p class="lead">Документтерди сайттын ичинде ачса да, өзүнчө жүктөп алса да болот. Бул студентке сабакты өз алдынча окууга ыңгайлуу шарт түзөт.</p>
+        <div class="grid three gap" style="margin-top:34px">
+          <article class="pdf-card glass reveal"><div><h3>Интернет реклама</h3><p class="muted">Жарнаманын түрлөрү, түшүнүгү жана колдонулушу.</p></div><div><button class="btn btn-primary" onclick="openPdf('internet.reklama..pdf.pdf')">Ачуу</button> <a class="btn btn-soft" href="internet.reklama..pdf.pdf" download>Жүктөө</a></div></article>
+          <article class="pdf-card glass reveal"><div><h3>Мобилография</h3><p class="muted">Телефон менен фото жана видео даярдоо боюнча колдонмо.</p></div><div><button class="btn btn-primary" onclick="openPdf('mob..pdf.pdf')">Ачуу</button> <a class="btn btn-soft" href="mob..pdf.pdf" download>Жүктөө</a></div></article>
+          <article class="pdf-card glass reveal"><div><h3>Маркетинг</h3><p class="muted">Маркетингдин негиздери жана кардар менен иштөө.</p></div><div><button class="btn btn-primary" onclick="openPdf('marketing..pdf.pdf')">Ачуу</button> <a class="btn btn-soft" href="marketing..pdf.pdf" download>Жүктөө</a></div></article>
+          <article class="pdf-card glass reveal"><div><h3>Медиа этика</h3><p class="muted">Жоопкерчилик, чынчылдык жана автордук укук.</p></div><div><button class="btn btn-primary" onclick="openPdf('etika..pdf.pdf')">Ачуу</button> <a class="btn btn-soft" href="etika..pdf.pdf" download>Жүктөө</a></div></article>
+          <article class="pdf-card glass reveal"><div><h3>SMM конспект</h3><p class="muted">Социалдык тармактардагы коммуникация боюнча конспект.</p></div><div><button class="btn btn-primary" onclick="openPdf('smm.conspect.pdf')">Ачуу</button> <a class="btn btn-soft" href="smm.conspect.pdf" download>Жүктөө</a></div></article>
+          <article class="pdf-card glass reveal"><div><h3>Кошумча материал</h3><p class="muted">Сабакты бекемдөө үчүн кошумча PDF документ.</p></div><div><button class="btn btn-primary" onclick="openPdf('effect..pdf.pdf')">Ачуу</button> <a class="btn btn-soft" href="effect..pdf.pdf" download>Жүктөө</a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="container">
+        <span class="small">Сүрөттөр</span><h2 class="title">Галерея</h2><p class="lead">Сүрөттөр сайтты жөнөкөй тексттен айырмалап, аны визуалдык жактан кызыктуу кылат.</p>
+        <div class="gallery" style="margin-top:34px">
+          <figure class="glass reveal"><img src="0.jpg" alt="Сүрөт"><figcaption>Санарип окуу</figcaption></figure><figure class="glass reveal"><img src="1.jpg" alt="Сүрөт"><figcaption>Окуу материалдары</figcaption></figure><figure class="glass reveal"><img src="2.jpg" alt="Сүрөт"><figcaption>Жарнама идеясы</figcaption></figure><figure class="glass reveal"><img src="3.jpg" alt="Сүрөт"><figcaption>Видео даярдоо</figcaption></figure><figure class="glass reveal"><img src="4.jpg" alt="Сүрөт"><figcaption>Контент даярдоо</figcaption></figure><figure class="glass reveal"><img src="5.jpg" alt="Сүрөт"><figcaption>Практикалык иш</figcaption></figure><figure class="glass reveal"><img src="6.jpg" alt="Сүрөт"><figcaption>Маркетинг талдоо</figcaption></figure><figure class="glass reveal"><img src="7.jpg" alt="Сүрөт"><figcaption>Медиа сабаттуулук</figcaption></figure><figure class="glass reveal"><img src="af80d97ffe78792a4ad103544e288662.jpg" alt="Сүрөт"><figcaption>Онлайн жарнама</figcaption></figure><figure class="glass reveal"><img src="1b9c9d0484405dd8c982757cd125d17a.jpg" alt="Сүрөт"><figcaption>Окутуучу жана аудитория</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:rgba(255,255,255,.04)">
+      <div class="container">
+        <span class="small">Окуу модели</span><h2 class="title">Студент теманы кантип өздөштүрөт?</h2>
+        <div class="wow-strip" style="margin-top:34px"><div class="wow-box glass reveal"><b>01</b><p class="muted">Теманын түшүндүрмөсүн, тарыхын жана колдонулган жерлерин окуйт.</p></div><div class="wow-box glass reveal"><b>02</b><p class="muted">Видео материал аркылуу теманы визуалдык түрдө түшүнөт.</p></div><div class="wow-box glass reveal"><b>03</b><p class="muted">PDF документти сайттын ичинде ачып, конспект катары колдонот.</p></div><div class="wow-box glass reveal"><b>04</b>  <p class="muted">Практикалык иш катары жарнама идеясы, пост же видео сценарий даярдайт.</p></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="container grid three gap">
+      <div><a class="logo" href="#top"><div class="logo-photo"><img src="logo.png" alt="Логотип"></div><div><div class="font-display">Медиа Сабак</div><small>Санарип билим берүү платформасы</small></div></a><p class="muted" style="margin-top:18px">Интернет реклама, мобилография, маркетинг, медиа этика жана практикалык иштер боюнча кыргыз тилиндеги бай окуу сайты.</p></div>
+      <div><h3>Бөлүмдөр</h3><p><a href="#topics">Багыттар</a></p><p><a href="#first">Биринчи тема</a></p><p><a href="#videos">Видеолор</a></p><p><a href="#pdf">PDF материалдар</a></p><p><a href="#gallery">Сүрөттөр</a></p></div>
+      <div><h3>Байланыш</h3><p class="muted">Телефон: +996 700 000 000</p><p class="muted">Email: info@mediasabak.kg</p><p class="muted">Instagram · TikTok · Telegram · WhatsApp</p></div>
+    </div>
+    <div class="container" style="margin-top:40px;border-top:1px solid rgba(255,255,255,.14);padding-top:18px;color:#94a3b8">© 2026 Медиа Сабак. Бардык укуктар корголгон.</div>
+  </footer>
+
+  <div id="pdfModal" class="modal" onclick="if(event.target.id==='pdfModal')closePdf()"><div class="modal-box"><div class="modal-head"><b id="pdfTitle">PDF материал</b><button class="close" onclick="closePdf()">Жабуу</button></div><iframe id="pdfFrame" src=""></iframe></div></div>
+  <div id="topicModal" class="modal" onclick="if(event.target.id==='topicModal')closeTopic()"><div class="modal-box"><div class="modal-head"><b id="topicTitle">Тема</b><button class="close" onclick="closeTopic()">Жабуу</button></div><div id="topicBody" class="modal-scroll"></div></div></div>
+
+  <script>
+    const topicData={
+      idea:{t:'Жарнама идеясы',h:'Жарнама идеясы эмнеден башталат?',p:['Жарнама идеясы — бул кардардын көңүлүн буруп, анын эсинде кала турган негизги ой. Жакшы идея товарды жөн эле көрсөтпөйт, ал адамдын муктаждыгына, эмоциясына жана кызыгуусуна жооп берет.','Тарыхый жактан жарнама идеялары гезит, радио жана телекөрсөтүү аркылуу тараган. Азыр болсо идея социалдык тармактагы кыска видео, баннер, сторис, блогердин сунушу же сайттагы акция түрүндө көрсөтүлөт.','Колдонулган жерлери: бизнес баракчалар, онлайн дүкөндөр, билим берүү курстары, туристтик кызматтар, кафе-ресторандар, жеке бренд жана коомдук долбоорлор.'],points:['Кимге арналат?','Кандай көйгөйдү чечет?','Эмне үчүн ушул товарды тандоо керек?','Бир сүйлөм менен негизги билдирүү кандай болот?']},
+      mobi:{t:'Мобилография',h:'Мобилография эмне үчүн керек?',p:['Мобилография — смартфон менен сапаттуу фото жана видео тартуу, монтаждоо жана жарыялоо көндүмү. Бүгүн көпчүлүк аудитория маалыматты телефон аркылуу көрөт, ошондуктан мобилография жарнамада абдан маанилүү.','Мобилографиянын өнүгүшү смартфондордун камерасы күчөгөндөн кийин башталды. Мурда сапаттуу ролик тартуу үчүн чоң камера керек болсо, азыр туура жарык, кадр жана монтаж менен телефон да жетиштүү.','Колдонулган жерлери: Reels, TikTok, YouTube Shorts, Stories, товар обзорлору, окуу видеолору, туризм, мода, тамак-аш жана кызмат көрсөтүү тармактары.'],points:['Жарыкты туура колдонуу','Кадр композициясы','Үндү таза жазуу','Кыска жана динамикалуу монтаж']},
+      content:{t:'Контент даярдоо',h:'Контент кантип даярдалат?',p:['Контент даярдоо — аудиторияга пайдалуу, түшүнүктүү жана кызыктуу маалымат берүү процесси. Контент текст, сүрөт, видео, инфографика, сторис, презентация же PDF түрүндө болушу мүмкүн.','Жакшы контент бренддин жүзүн түзөт. Ал ишеним жаратат, кардар менен байланыш түзөт жана сатып алуу чечимине таасир берет.','Колдонулган жерлери: Instagram посттору, TikTok видеолору, сайт макалалары, окуу материалдары, жарнама баннерлери, email билдирүүлөр жана презентациялар.'],points:['Максат коюу','Контент-план түзүү','Текст жана визуал даярдоо','Жарыялоо жана талдоо']},
+      practice:{t:'Практикалык иш',h:'Практика эмне берет?',p:['Практикалык иш теорияны реалдуу натыйжага айлантат. Студент теманы окуп эле тим болбостон, аны колдонуп көрөт.','Мисалы, студент бир товар үчүн жарнама идеясы, пост тексти, видео сценарий, сүрөт концепциясы жана кыска кампания планы даярдай алат.','Практика билимди бекемдеп, чыгармачылык ой жүгүртүүнү жана жоопкерчиликти өнүктүрөт.'],points:['Товарды тандаңыз','Аудиторияны аныктаңыз','Жарнама текстин жазыңыз','Видео же пост даярдаңыз','Натыйжаны талдаңыз']},
+      marketing:{t:'Маркетинг',h:'Маркетингдин негизги мааниси',p:['Маркетинг — кардардын муктаждыгын түшүнүп, ага туура сунуш берүү системасы. Ал жарнамадан кеңири түшүнүк: продукт, баа, жайылтуу жана байланыш каналдарынын баарын камтыйт.','Маркетингдин тарыхы соода өнүккөн мезгилдерден башталат. Бирок заманбап маркетинг кардарга багытталган мамиле катары XX кылымда активдүү өнүккөн. Азыр санарип маркетинг интернет реклама, SMM, аналитика жана автоматташтыруу менен байланышкан.','Колдонулган жерлери: бизнес пландоо, бренд өнүктүрүү, сатуу, кардар тартуу, рынокту изилдөө жана жаңы продукт чыгаруу.'],points:['Кардар портрети','Баалуулук сунушу','Бааны аныктоо','Канал тандоо','Натыйжаны өлчөө']},
+      ethics:{t:'Медиа этика',h:'Медиа этика эмне үчүн маанилүү?',p:['Медиа этика — маалыматты чынчыл, туура жана жоопкерчиликтүү берүү принциптери. Жарнамада жалган убада, уруксатсыз сүрөт колдонуу, автордук укукту бузуу жана адамдарды адаштыруу туура эмес.','Интернетте маалымат тез тарайт, ошондуктан ар бир пост, видео же жарнама коомго таасир этет. Медиа этика бренддин ишенимин сактайт.','Колдонулган жерлери: журналистика, SMM, блогерлик, жарнама, билим берүү материалдары, коомдук баракчалар жана онлайн платформалар.'],points:['Маалыматты текшерүү','Авторду көрсөтүү','Жалган маалымат таратпоо','Аудиторияны сыйлоо','Коопсуз жана маданияттуу коммуникация']},
+      internet:{t:'Интернет реклама',h:'Интернет рекламанын кеңири түшүндүрмөсү',p:['Интернет реклама — санарип каналдар аркылуу максаттуу аудиторияга маалымат жеткирүү ыкмасы. Ал социалдык тармак, издөө системасы, сайт, видео платформа, мессенджер жана мобилдик тиркеме аркылуу ишке ашат.','Анын негизги артыкчылыгы — аудиторияны так тандоо жана натыйжаны өлчөө. Мисалы, канча адам көрдү, канча адам басып кирди, канча адам заказ берди деген маалыматтарды талдоого болот.','Интернет реклама билим берүү, туризм, соода, мода, медицина, кызмат көрсөтүү, мамлекеттик долбоорлор жана жеке бренд тармактарында колдонулат.'],points:['Таргетинг','Контексттик жарнама','Видео жарнама','Баннер','Email жана мессенджер','Аналитика']}
+    };
+    function openPdf(file){document.getElementById('pdfTitle').textContent=file;document.getElementById('pdfFrame').src=file;document.getElementById('pdfModal').classList.add('open')}
+    function closePdf(){document.getElementById('pdfModal').classList.remove('open');document.getElementById('pdfFrame').src=''}
+    function openTopic(key){const d=topicData[key];document.getElementById('topicTitle').textContent=d.t;document.getElementById('topicBody').innerHTML=`<h2 class="font-display" style="font-size:36px;margin:0 0 18px">${d.h}</h2>${d.p.map(x=>`<p class="muted">${x}</p>`).join('')}<h3>Негизги пункттар</h3><div style="display:flex;gap:10px;flex-wrap:wrap">${d.points.map(x=>`<span class="chip">${x}</span>`).join('')}</div>`;document.getElementById('topicModal').classList.add('open')}
+    function closeTopic(){document.getElementById('topicModal').classList.remove('open')}
+    document.querySelectorAll('video').forEach(v=>{v.addEventListener('play',()=>{document.querySelectorAll('video').forEach(o=>{if(o!==v)o.pause()})})})
+    const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
